@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import DarkMode from './Tools/DarkMode';
 import HomePage from './HomePage/HomePage';
@@ -14,13 +14,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<DarkMode />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
 
   );
