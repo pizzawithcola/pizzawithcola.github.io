@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import DarkMode from './Tools/DarkMode';
 import HomePage from './HomePage/HomePage';
+import EduPage from './EduPage/EduPage';
 
 const theme = createTheme({
   colorSchemes: {
@@ -17,7 +18,8 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<DarkMode />} />
+          <Route path="/education" element={<EduPage />} />
+          <Route path="/mode" element={<DarkMode />} />
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </HashRouter>
